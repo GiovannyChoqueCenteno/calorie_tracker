@@ -1,6 +1,9 @@
 import Form from "./components/Form";
+import { act, useReducer } from "react";
+import { activityReducer, initialState } from "./reducers/activity-reducer";
 
 export default () => {
+  const [state, dispatch] = useReducer(activityReducer, initialState);
   return (
     <>
       <header className="bg-lime-600 py-3">
